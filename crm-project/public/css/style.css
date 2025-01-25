@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background:linear-gradient(to right,rgb(3, 3, 70),rgba(0, 0, 255, 0.374)) !important;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 255, 0.166) !important;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+.navbar-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+    background-color: transparent !important; 
+    padding: 0.5rem;
+    box-shadow: none !important; 
+    outline: none; 
+    cursor: pointer;
+}
+
+
+.line-bar {
+    background-color: white;
+    height: 5px;
+    width: 40px;
+    margin: 4px 0;
+    transition: all 0.3s ease; /* Adds smooth animation */
+}
+
+.navbar-toggler:hover .line-bar {
+    background-color: lightgray; /* Optional: Changes color on hover */
+}
+
+.logo{
+    width: 10em;
+}
+.Login-btn{
+    background-color: orange !important;
+    display: inline-block !important;
+    width: 10em;
+    font-size: 20px !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-weight: bold !important;
+}
+footer{
+    display: flex;
+    align-items: center;
+    height:600px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 255, 0.301) ;
+}
+.footer-title{
+    color: rgb(255, 196, 0);
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+}
+.form-outline{
+    background:linear-gradient(to right,rgba(255, 255, 255, 0.385),rgba(0, 0, 255, 0.188));
+    padding: 20px;
+    border-radius: 10px;
+}
+.submit-btn{
+    font-size: 1.2rem !important;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder !important;
+    color: white;
+}
+.form-title,.data-title{
+    font-size: 4em;
+    color: white !important;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.form-floating label{
+    color: orange;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+.container-index{
+    height: 400px;
+}
+.user-profile{
+    background-color: rgba(255, 255, 255, 0.429);
+}
