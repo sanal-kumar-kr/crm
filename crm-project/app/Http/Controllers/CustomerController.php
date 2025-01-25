@@ -63,13 +63,18 @@ class CustomerController extends Controller
               return view('customer-form');
         }
         $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:customers,name',
             'email' => 'required|email|unique:customers,email',
-            'phone' => 'required|digits:10',
+            'phone' => 'required|min:12|max:15|regex:/^\+91\d{10}$/|unique:customers,phone',
             'address' => 'required',
             'group' => 'required'
         ]);
         $user = $request->user();
+        if ($user->role == 'manager') {
+            if (!in_array($validatedData['group'], ['Individual', 'Company'])) {
+                return response()->json(['message' => 'Managers can only create customers in "Individual" or "Company" groups.'], 403);
+            }
+        }
         $validatedData['created_by'] = $user->id;
         $customer = CustomersModel::create($validatedData);
         if ($request->wantsJson()) {
@@ -81,9 +86,9 @@ class CustomerController extends Controller
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:customers,name,' . $id,
             'email' => 'required|email|unique:customers,email,' . $id,
-            'phone' => 'required|digits:10',
+            'phone' => 'required|min:12|max:15|regex:/^\+91\d{10}$/|unique:customers,phone,' . $id,
             'address' =>'required|string',
             'group' => 'required|string'
         ]);
@@ -104,6 +109,11 @@ class CustomerController extends Controller
 
     public function destroy(Request $request,$id)
     {
+        if(auth()->user()->role !== "admin")
+        {
+            return response()->json(['message' => 'Access Denied'], 403);   
+        }
+
         $customer = CustomersModel::find($id);
         if (!$customer) {
             return $this->responseNotFound();

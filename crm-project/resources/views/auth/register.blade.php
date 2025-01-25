@@ -9,7 +9,7 @@
                     <div class="container">
                         <div class="form-outline mt-5">
                             <div class="form-wrapper">
-                                <h1 class=" text-center form-title fs-1 text-white">Login</h1>
+                                <h1 class=" text-center form-title fs-1 text-white">Register</h1>
                                 <form method="POST" action="{{ route('register') }}">
                                 @csrf
                                 <div class="form-floating mb-3 mt-3">

@@ -51,33 +51,14 @@
             <div class="container-fluid">
                 <div class="row mt-5">
                     
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <section class="about container">
                             <h4 class=" footer-title">About</h4>
-                            <p class=" description text-white">"Law for Indians" is a comprehensive online platform dedicated to providing accurate, up-to-date legal information and resources for Indian citizens. Our mission is to educate and empower individuals by simplifying complex legal matters, helping them understand their rights and responsibilities under Indian law.</p>
+                            <p class=" description text-white">A Customer Relationship Management (CRM) system is a software tool designed to help businesses manage and analyze interactions with current and potential customers. The goal is to improve customer relationships, streamline processes, and increase profitability. CRMs are used by companies of all sizes and across different industries to enhance sales, marketing, and customer support efforts.</p>
                         </section>
                     </div>
-                    <div class="col-md-4">
-                        <section class="quick-links container">
-                            <h4 class=" footer-title">Userfull Links</h4>
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
-                              <li class="nav-item ">
-                                <a class="text-white" href="#">Home</a>
-                              </li>
-                              <li class="nav-item ">
-                                <a class="text-white" href="#">About</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class=" text-white" href="#">Contact</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class=" text-white" href="#">Login</a>
-                              </li>
-                             </ul> 
-                        </section>
-                        
-                    </div>
-                    <div class="col-md-4">
+                    
+                    <div class="col-md-5">
                         <section class="social-media container">
                             <h4 class=" footer-title">Social NetWorks</h4>
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">

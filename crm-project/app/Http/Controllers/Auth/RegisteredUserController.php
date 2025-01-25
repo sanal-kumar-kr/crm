@@ -19,6 +19,10 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
+        if(Auth::check()){
+            return redirect()->intended('/');
+
+        }
         return view('auth.register');
     }
 

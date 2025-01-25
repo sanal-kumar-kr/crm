@@ -46,11 +46,13 @@
                         <td>{{ $customer->creator->name }}</td>
                         <td class="d-flex gap-1">
                             <a href="{{ url('/customers/'.$customer->id) }}" class="text-white btn-warning"><button>Edit</button></a>
+                            @if(auth()->user()->role == "admin")
                             <form action="{{ url('customers/'.$customer->id) }}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <input type="submit" value="Delete" class="btn-warning">
                             </form>
+                            @endif
                         </td>
                     </tr>
                 @endforeach
